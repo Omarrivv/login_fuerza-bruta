@@ -29,4 +29,5 @@ app.post("/login", (req, res) => {
   return res.send("<h3>❌ Usuario o contraseña incorrecta</h3>");
 });
 
-app.listen(3000, () => console.log("Demo en http://localhost:3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Demo en http://localhost:${PORT}`));
